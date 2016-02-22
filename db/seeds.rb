@@ -6,3 +6,5 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Product.create(:name => "seed-generated product", :description => "I also created this product without using the html form!")
+Product.create(:name => "another seed-generated product", :description => "I also created this product without using the html form!")
+Product.create(:name => "yet another seed-generated product", :description => "I also created this product without using the html form!")
