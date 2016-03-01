@@ -6,7 +6,7 @@ body {
   line-height: 18px;
 }
 
-p, ol, ul, td {
+p, ol, ul, td, {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -71,3 +71,13 @@ div {
     list-style: square;
   }
 }
+
+.searchformat  {
+  color: #9d9d9d;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  border: none;
+  font-weight: 100;
+  }
+
+

@@ -32,6 +32,12 @@
 	        <li><%= link_to "About", static_pages_about_path %></li>
 	        <li><%= link_to "Products", root_path %></li>
 	        <li><%= link_to "Contact", static_pages_contact_path%></li>
+	        <li><%= form_tag("/products", method: "get", class: "navbar-inverse navbar-form") do %>
+	        	<%= label_tag(:q, "Search for:", class: "searchformat") %>
+	        	<%= text_field_tag(:q) %>
+	        	<%= submit_tag("Search", class: "btn btn-default") %>
+	        	<%end%>
+	        </li>
 	        
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
