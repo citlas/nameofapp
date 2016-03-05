@@ -7,6 +7,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Custom styles for signin -->
+    <link href="signin.css" rel="stylesheet">
+
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -39,10 +43,23 @@
 	        	<%end%>
 	        </li>
 	        
+	        <ul class="nav pull-right">
+	      	<li>
+	      		<% if user_signed_in? %>
+	      		<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+	      		<% else %>
+	      		<%= link_to('Login', new_user_session_path) %>
+	      		<% end %>
+	      	</li>
 	      </ul>
+	      
+	      </ul>
+	      
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
 	</nav>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 	
 	
 

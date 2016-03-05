@@ -15,4 +15,7 @@ end
 def destroy
 end
 
+before_filter :authenticate_user!
+
+
 end
