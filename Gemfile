@@ -56,4 +56,8 @@ end
 # gem devise
 gem 'devise'	
 
+# gem cancancan
+gem 'cancancan', '~> 1.10'
+
+
 
