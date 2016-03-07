@@ -1,29 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class ="col-sm-2 col-md-4">
+      <div class="thumbnail">
+         <%= image_tag(@product.image_url, class:"img-responsive")%>
+         <div class="caption">
+          
+          <h3 class="text-center">
+            <strong><%= @product.name %></strong>
+          </h3>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+          <h5 class="text-center">
+            <span class="glyphicon glyphicon-plus"></span><strong> Description:</strong>
+            <%= @product.description %>
+          </h5>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+          <h5 class="text-center">
+          	<span class="glyphicon glyphicon-eye-open"></span><strong> Color:</strong>
+          	<%= @product.colour%>
+          </h5>
 
-<p>
-	<strong>Color:</strong>
-	<%= @product.colour%>
-</p>
+          <h6 class="text-center">
+          	<span class="glyphicon glyphicon-euro"></span><strong> Price:</strong>
+          	<%= @product.price%>
+          </h6>
 
-<p>
-	<strong>Price:</strong>
-	<%= @product.price%>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+          <h6 class="text-center">
+            <span class="glyphicon glyphicon-comment"></span><strong> Comments:</strong>
+          </h6>
+   
+          <p class="text-center">
+          <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-primary" %> |
+          <%= link_to 'Back', products_path, class: "btn btn-default" %>
+        </p>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
