@@ -25,10 +25,16 @@
           	<span class="glyphicon glyphicon-euro"></span><strong> Price:</strong>
           	<%= @product.price%>
           </h6>
+        
+         <p align="center">Average Rating: <div align="center" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
           <h6 class="text-center">
             <span class="glyphicon glyphicon-comment"></span><strong> Comments:</strong>
           </h6>
+   <%= render 'new_comment' %>
+   <%= render 'comments' %>
+
+
    
           <p class="text-center">
           <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-primary" %> |
