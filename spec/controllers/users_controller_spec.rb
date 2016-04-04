@@ -6,7 +6,7 @@ describe UsersController, :type => :controller do
 			#@user = User.create!(email: "abc@abc.abc", password: "abcabcabc")
       @user = FactoryGirl.create(:user)
       @user2 = User.create!(email: "def@def.def", password: "defdefdef")
-			end
+			end 
 			
 			describe "GET #show" do
 				context "User is logged in" do
