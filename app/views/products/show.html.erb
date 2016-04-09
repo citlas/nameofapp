@@ -31,10 +31,12 @@
           <h6 class="text-center">
             <span class="glyphicon glyphicon-comment"></span><strong> Comments:</strong>
           </h6>
-   <%= render 'new_comment' %>
-   <%= render 'comments' %>
+          <%= render 'new_comment' %>
+          <%= render 'comments' %>
    
-
+          <%= form_tag "/payments/create" do %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+          <% end %>
 
    
           <p class="text-center">
