@@ -4,14 +4,19 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 # Use sqlite3 as the database for Active Record
-	group :development, :test do
+group :development, :test do
 	gem 'sqlite3'
-	#rspec
+	
 	%w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
-		gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch=>'master'
-		end
-	#factory girl
+		gem lib
+	end
+	
 	gem "factory_girl_rails", "~> 4.0"
+  gem 'byebug'
+	gem 'guard'
+	gem 'guard-rspec', '4.6.0', require: false
+	gem 'spork-rails'
+	gem 'guard-spork'
 end
 
 # Use SCSS for stylesheets
@@ -41,28 +46,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
-
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-	# guard
-	gem 'guard'
-	gem 'guard-rspec', require: false
-
-	#spork
-	gem 'spork-rails'
-
-	#guard spork
-	gem 'guard-spork'
-
 end
 
 # postgreSQL for Heroku
@@ -82,5 +71,3 @@ gem 'stripe'
 
 ## Gemfile for Rails 3+
 gem 'will_paginate', '~> 3.0.5'
-
-
