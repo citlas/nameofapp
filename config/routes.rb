@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   end
   resources :orders, only: [:index, :show, :create, :destroy]
 
-   
+  post 'payments/create' 
+  
 
   get 'static_pages/about'
 
