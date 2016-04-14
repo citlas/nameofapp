@@ -21,6 +21,7 @@ class PaymentsController < ApplicationController
   				user_id: @user.id,
   				total: @product.price
   				)
+  		
   		end
 
 		rescue Stripe::CardError => e
@@ -31,7 +32,10 @@ class PaymentsController < ApplicationController
 
 		end
 
-		redirect_to product_path(@product)
+
+		redirect_to payments_created_path(@product)
+
+
 	end
 
 

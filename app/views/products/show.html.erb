@@ -34,10 +34,16 @@
           <%= render 'new_comment' %>
           <%= render 'comments' %>
    
-          <%= form_tag "/payments/create" do %>
-            <%= render partial: "shared/stripe_checkout_button" %>
-            <%= hidden_field_tag(:product_id, @product.id) %>
+          <div class="text-center payCard">  
+          <% if signed_in? %>
+            <%= form_tag "/payments/create" do %>
+              <%= render partial: "shared/stripe_checkout_button" %>
+              <%= hidden_field_tag(:product_id, @product.id) %>
+            <% end %>
+          <% else %>
+          <h3> You have to log in if you want to buy it! </h3>
           <% end %>
+        </div>
 
    
           <p class="text-center">
@@ -49,3 +55,4 @@
     </div>
   </div>
 </div>
+
