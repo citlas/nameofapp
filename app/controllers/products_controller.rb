@@ -4,17 +4,22 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    byebug
     if Rails.env.production?
       if params[:q]
         search_term = params[:q]
+        logger.debug "the search term is #{search_term}"
         @products = Product.where("name ilike ?", "%#{search_term}%")
+        logger.debug "the products with that search are #{@products}"
       else
         @products = Product.all
       end
     else 
       if params[:q]
         search_term = params[:q]
+        logger.debug "the search term is #{search_term}"
         @products = Product.where("name LIKE ?", "%#{search_term}%")
+        logger.debug "the products with that search are #{@products}"
       else
         @products = Product.all
     end

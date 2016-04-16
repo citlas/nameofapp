@@ -1,5 +1,6 @@
  <%= image_tag(product.image_url, class:"img-responsive")%>
 <h2> <%= product.name %></h2>
+<% logger.debug "checking debug - product: #{product.name}" %>
 <p> <%= product.description %></p>
 <p> Color: <%= product.colour %></p>
 <p> Price: <%=product.price%> €</p>

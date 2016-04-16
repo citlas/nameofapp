@@ -76,4 +76,7 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # logger ignore info and debug - show warn, error and fatal in production
+  Rails.logger.level = 2
 end
