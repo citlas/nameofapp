@@ -32,6 +32,11 @@ class PaymentsController < ApplicationController
 
 		end
 
+		ActionMailer::Base.mail(:from => 'citlalli.prado@gmail.com',
+			:to => @email,
+			:subject => "Thanks for buying",
+			:body => "You bought #{@product.name}, which is a #{@product.description} with a price of #{@product.price.to_s}").deliver_now
+
 
 		redirect_to payments_created_path(@product)
 
