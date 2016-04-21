@@ -52,6 +52,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  #brakeman
+  gem 'brakeman', :require => false
 end
 
 # postgreSQL for Heroku
@@ -71,3 +74,4 @@ gem 'stripe'
 
 ## Gemfile for Rails 3+
 gem 'will_paginate', '~> 3.0.5'
+
