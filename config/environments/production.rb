@@ -79,4 +79,6 @@ Rails.application.configure do
 
   # logger ignore info and debug - show warn, error and fatal in production
   Rails.logger.level = 2
+
+  config.force_ssl = true
 end
