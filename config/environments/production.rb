@@ -78,7 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # logger ignore info and debug - show warn, error and fatal in production
-  Rails.logger.level = 2
+  # Rails.logger.level = 2
 
   config.force_ssl = true
 end
