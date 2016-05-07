@@ -26,6 +26,9 @@ class ProductsController < ApplicationController
     end
   end
   respond_with @products
+    
+    Rails.cache.write(@products, @products_id)
+    puts Rails.cache.read(@products)
   end
 
   # GET /products/1

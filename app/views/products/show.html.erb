@@ -6,7 +6,9 @@
       <div class="thumbnail">
          <%= image_tag(@product.image_url, width: "350", class: "img-zoom", data_zoom_image: @product.image_url)%>
          <div class="caption">
+      
           
+          <% cache @product do %>
           <h3 class="text-center">
             <strong><%= @product.name %></strong>
           </h3>
@@ -25,6 +27,8 @@
           	<span class="glyphicon glyphicon-euro"></span><strong> Price:</strong>
           	<%= @product.price%>
           </h6>
+        
+        <% end %>
         
          <p align="center">Average Rating: <div align="center" class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 

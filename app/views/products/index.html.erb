@@ -34,20 +34,18 @@
 
 
 <div class="container-fluid">
+
   <div class="row">
-    <% @products.each do |product| %>
-      
-      
-<div class ="col-sm-2 col-md-4">
- <%= render product %>
-</div>
-      
+    <% cache(cache_key_for_products) do %>
+      <% @products.each do |product| %>
+        <div class ="col-sm-2 col-md-4">
+           <%= render product %>
+        </div>      
       <% end %>
+    <% end %>
   </div>
 </div>
+
 <h4><%= link_to 'New Product', new_product_path %></h4>
+
 <br>
-
-
-
-

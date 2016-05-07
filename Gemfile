@@ -77,3 +77,6 @@ gem 'will_paginate', '~> 3.0.5'
 
 # gem angular
 gem 'angularjs-rails'
+
+# memcache
+gem 'dalli'
