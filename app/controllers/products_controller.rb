@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  respond_to :json; :html
+  respond_to :json, :html
 
   # GET /products
   # GET /products.json
