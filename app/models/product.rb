@@ -9,4 +9,9 @@ class Product < ActiveRecord::Base
 		comments.average(:rating).to_f
 	end
 
+
+	 def comments_count
+    $redis.scard(self.redis_key(:comments))
+  end
+  
 end

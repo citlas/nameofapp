@@ -33,5 +33,7 @@ module Nameofapp
     config.active_record.raise_in_transactional_callbacks = true
     
     config.filter_parameters << :password
+
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache'
   end
 end

@@ -80,3 +80,9 @@ gem 'angularjs-rails'
 
 # memcache
 gem 'dalli'
+
+#gem redis
+gem 'redis-rails'
+
+#gem new relic 0c967fcb53add8118122b3712c44d5000c94652d
+gem 'newrelic_rpm'
