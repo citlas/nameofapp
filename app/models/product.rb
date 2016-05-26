@@ -10,8 +10,10 @@ class Product < ActiveRecord::Base
 	end
 
 
-	 def comments_count
-    $redis.scard(self.redis_key(:comments))
-  end
-  
+#	 def comments_count
+ #   $redis.scard(self.redis_key(:comments))
+  #end
+
+$redis.sadd("user_#{self.id}_friends", user.id)
+
 end
