@@ -46,6 +46,8 @@
   </div>
 </div>
 
+<% if signed_in? && current_user.admin? %>
 <h4><%= link_to 'New Product', new_product_path %></h4>
+<% end %>
 
 <br>
